@@ -1,0 +1,17 @@
+- name: checking the precedense of different ways of passing vars
+  hosts: localhost
+  connection: local
+  vars:
+    course: "play vars"
+  vars_promt:
+  - name: course
+    prompt: Please enter the course
+    private: false
+  vars_files:
+  - course.yaml
+  tasks:
+  vars:
+    course: "task vars"
+  - name: this is from task
+    debug:
+      msg: "This course is from: {{course}}

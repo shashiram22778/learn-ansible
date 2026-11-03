@@ -6,7 +6,7 @@
   tasks:
   - name: task 1
     debug:
-      msg: "Hi, This is property:{{property} got from my father"  
+      msg: "Hi, This is property:{{property}} got from my father"  
   
   - name: task 2
     vars:

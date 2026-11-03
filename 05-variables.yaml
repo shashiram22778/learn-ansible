@@ -6,7 +6,6 @@
     trainer: Siva Kumar Sri
     duration: 10 hrs
   tasks:
-    name: print variables
+  - name: print variables
     debug:
       msg: "Hi, I am learing {{course}} from {{trainer}}, duration is {{duration}}"
-      

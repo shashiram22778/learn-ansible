@@ -1,0 +1,15 @@
+- name: demo task on variables
+  hosts: localhost
+  connection: local
+  vars:
+    property: "100acers"
+  tasks:
+  - name: task 1
+    debug:
+      msg: "Hi, This is property:{{property} got from my father"  
+  
+  - name: task 2
+    vars:
+      property: "10acers"
+    debug:
+      msg: "Hi, This is from var defined in local: {{property}}"

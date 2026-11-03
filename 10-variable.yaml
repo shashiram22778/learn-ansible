@@ -7,11 +7,11 @@
   - name: course
     prompt: Please enter the course
     private: false
-  vars_files:
-  - course.yaml
+  # vars_files:
+  # - course.yaml
   tasks:
   - name: this is from task
     # vars:
-    #   course: "task vars"
+    #   course: "task vars"          ##this has the first preferense
     debug:
       msg: "This course is from: {{course}}"

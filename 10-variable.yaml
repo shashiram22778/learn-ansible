@@ -14,4 +14,4 @@
     vars:
       course: "task vars"
     debug:
-      msg: "This course is from: {{course}}
+      msg: "This course is from: {{course}}"

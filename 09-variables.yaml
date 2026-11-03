@@ -4,4 +4,4 @@
   tasks:
   - name: using -e
     debug:
-    msg: "This is my favorate {{gameshow}}"
+      msg: "This is my favorate {{gameshow}}"

@@ -1,6 +1,7 @@
--name: ping demo
- hosts: local
- connection: local
- tasks:
-  -name: ping this localhost
-   ping: 
+- name: ping demo       # Play starts
+  hosts: local          # Play-level property
+  connection: local    # Play-level property
+
+  tasks:                # Tasks section
+    - name: ping this localhost
+      ping:             # Module

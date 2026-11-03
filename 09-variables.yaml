@@ -1,6 +1,6 @@
 - name: another way to pass the variale dynamically to ansible using -e
   hosts: localhost
-  conneciton: local
+  connection: local
   tasks:
   - name: using -e
     debug:

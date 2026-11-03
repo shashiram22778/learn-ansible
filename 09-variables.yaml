@@ -1,0 +1,7 @@
+- name: another way to pass the variale dynamically to ansible using -e
+  hosts: localhost
+  conneciton: local
+  tasks:
+  - name: using -e
+    debug:
+    msg: "This is my favorate {{gameshow}}"

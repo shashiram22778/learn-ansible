@@ -1,0 +1,12 @@
+- name: Install and start nginx
+  hosts: frontend
+  tasks:
+  - name: Install nginx
+    ansible.builtin.dnf:
+    name: nginx
+    state: latest
+  - name: start ngninx
+    service:
+      name: nginx
+      state: started
+      enabled: yes

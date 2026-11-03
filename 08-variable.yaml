@@ -1,0 +1,14 @@
+- name: variables from prmpt
+  hosts: localhost
+  connection: local
+  vars_prompt:
+  - name: username
+    prompt: Please enter the username
+    private: false
+  - name: password
+    prompt: Please enter the password
+    private: true
+  tasks:
+  - name: print the prompt variables
+    debug:
+      msg: "Hi, the username is :{{username}}\n password is :{{password}}"

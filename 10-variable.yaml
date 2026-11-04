@@ -8,7 +8,7 @@
     prompt: Please enter the course
     private: false
   # vars_files:
-  # - course.yaml
+  # - course.yaml           ## this gets the second preferense
   tasks:
   - name: this is from task
     # vars:

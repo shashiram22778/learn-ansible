@@ -1,15 +1,15 @@
 - name: error handiling for roboshop user
   hosts: local
-  connections: local
+  connection: local
   become: yes
   tasks:
   - name: check if user exists?
     command: id roboshop
     register: user_output
-    ignore_error: yes
+    ignore_errors: yes
   - name: print the previosu task output
     debug:
-      msg: {{user_output}}
+      msg: "{{user_output}}"
   - name: create user if it dont exists
     command: adduser roboshop
     when: user_output.rc != 0    

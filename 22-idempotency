@@ -1,0 +1,9 @@
+- name: proving idempotency nature of ansible
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: crete user
+    user:
+      name: roboshop
+      state: present

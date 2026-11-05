@@ -1,0 +1,14 @@
+- name: install multiple packages
+  hosts: local
+  connection: local
+  vars:
+    packages:
+    - nginx
+    - git
+    - mysql
+  tasks:
+  - name: instlling packages
+    dnf:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ packages }}"

@@ -8,7 +8,7 @@
     - Reddy
     - Mettukuru
     topic: ANSIBLE
-    duraiton: "4"
+    duration: "4"
   tasks:
   - name: print the name
     debug:

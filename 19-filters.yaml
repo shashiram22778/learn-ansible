@@ -1,0 +1,25 @@
+- name: demo on filters
+  hosts: local
+  connection: local
+  vars:
+    topics: Linux, Shell, ansible, Terraform, Docker
+    names:
+    - Sivakumar
+    - Reddy
+    - Mettukuru
+    topic: ANSIBLE
+    duraiton: "4"
+  tasks:
+  - name: print the name
+    debug:
+      msg: "Hi, {{person_name | default('Ramesh')}}"
+  - name: convert string to list
+    debug:
+      msg: "{{topics | ansible.builtin.split(',')}}"
+  - name: convert to lower case
+    debug:
+      msg: "Topic: {{ topic | lower }}"
+  
+  - name: convert to string to int
+    debug:
+      msg: "Duration: {{ duration | int }}"

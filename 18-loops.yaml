@@ -1,0 +1,17 @@
+- name: install and delte packags
+  hosts: local
+  connections: local
+  become: yes
+  vars:
+    packages:
+    - { name: 'nginx', stage: 'absent'}
+    - { name: 'mysql', state: 'present' }
+    - { name: 'git', state: 'present' }
+    - { name: 'net-tools', state: 'present' }
+    - { name: 'htop', state: 'absent' }
+  tasks:
+  - name: install packages
+    package:
+      name: "{{ item.name }}"
+      state: "{{ item.stage }}"
+    loop: "{{ packages }}"

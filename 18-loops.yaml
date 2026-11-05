@@ -1,6 +1,6 @@
 - name: install and delte packags
   hosts: local
-  connections: local
+  connection: local
   become: yes
   vars:
     packages:

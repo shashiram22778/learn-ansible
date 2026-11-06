@@ -1,0 +1,21 @@
+[frontend]
+172.12.123.13
+172.12.123.15
+172.12.123.16
+
+[database]
+
+[backend]
+
+[roboshop:children]
+frontend
+backend
+database
+
+[local]
+localhost
+
+[frontend:vars]
+course=ansible
+trainer=Sivakumar Reddy M
+duration=10 hrs
